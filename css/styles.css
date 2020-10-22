@@ -27,6 +27,9 @@ body {
 	font-family: var(--mainFont);
 	font-size: 1.2rem;
 }
+p {
+	line-height: 2;
+}
 /* ------------------------------- */
 
 /* Header */
@@ -75,4 +78,65 @@ body {
 	color: var(--white);
 	text-decoration: none;
 	font-size: 1.4rem;
+}
+
+/* Content */
+.content {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 768px) {
+	.content {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.main-content {
+		flex: 0 0 70%;
+	}
+	.sidebar {
+		flex: 0 0 30%;
+		order: -1;
+	}
+}
+
+/* Sidedar */
+.sidebar {
+	background-color: var(--gray);
+	padding: 2rem;
+}
+.sidebar h2 {
+	text-align: center;
+}
+.sidebar ul {
+	list-style: none;
+}
+.sidebar ul li:not(:last-child) {
+	margin-bottom: 0.8rem;
+}
+.sidebar a {
+	text-decoration: none;
+	color: var(--black);
+}
+.sidebar a:hover {
+	color: var(--secondary);
+}
+
+/* Main Content */
+.main-content {
+	padding: 2rem;
+}
+
+/* Footer */
+.site-footer {
+	background-color: var(--secondary);
+	color: var(--white);
+	font-size: 1rem;
+	flex: 1;
+}
+
+.site-footer p {
+	margin: 0;
+	padding: 1rem 0;
+	text-align: center;
 }
